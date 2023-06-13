@@ -14,6 +14,13 @@
         grid-template-columns: repeat(1, 1fr);
         padding-bottom: 6rem;
     }
+    .wrapper {
+        display: block;
+    }
+    .wrapper ul.dynamic-txts {
+        margin-top: 0;
+        text-align: center !important;
+    }
 
     .left-header{
         .h-shape{
@@ -251,6 +258,10 @@
             text-align: center;
             padding-top: 3rem;
         }
+    }
+    .wrapper ul.dynamic-txts {
+        margin-top: auto;
+        text-align: left;
     }
 }
 @media screen and (max-width:700px){
