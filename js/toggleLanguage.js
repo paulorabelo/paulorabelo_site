@@ -1,8 +1,8 @@
-const divEnglish = document.getElementById('english');
-const divPortuguese = document.getElementById('portuguese');
+var divEnglish = document.getElementById('english');
+var divPortuguese = document.getElementById('portuguese');
 
-divEnglish.style.display = 'none'
-divPortuguese.style.display = 'block';
+divEnglish.style.display = 'block';
+divPortuguese.style.display = 'none';
 
 function toggleLanguage() {
 
