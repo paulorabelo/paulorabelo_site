@@ -1,11 +1,11 @@
 var divsEnglish = document.getElementsByClassName('us-en');
 var divsPortuguese = document.getElementsByClassName('pt-br');
 
-// setDisplay(divsEnglish, 'block');
-// setDisplay(divsPortuguese, 'none');
+setDisplay(divsEnglish, 'block');
+setDisplay(divsPortuguese, 'none');
 
-setDisplay(divsEnglish, 'none');
-setDisplay(divsPortuguese, 'block');
+// setDisplay(divsEnglish, 'none');
+// setDisplay(divsPortuguese, 'block');
 
 function toggleLanguage() {
     toggleDisplay(divsEnglish);
