@@ -8,15 +8,16 @@
 :root {
   --color-primary: #FFFFFF;
   --color-secondary: #a18a17;
-  --color-blue: #000b49;
+  --color-terceary: #000b49;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #6c7983;
   --color-grey-2: #6c7983;
   --color-grey-3: #6c7983;
   --color-grey-4: #454e56;
-  --color-grey-5: #f8f8f8;
+  --color-grey-5: #d6d3d3;
   --color-grey-6: #12181b;
+  --color-grey-7: #f8f8f8;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
@@ -24,7 +25,7 @@
 .dark-mode {
   --color-primary: #000b49;
   --color-secondary: #a18a17;
-  --color-white: #FFFFFF;
+  --color-terceary: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
@@ -33,13 +34,14 @@
   --color-grey-4: #454e56;
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
+  --color-grey-7: #2a2e35;
 }
 
 body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
-  color: var(--color-blue);
+  color: var(--color-terceary);
   transition: all 0.4s ease-in-out;
 }
 
@@ -124,25 +126,34 @@ section {
   color: var(--color-white);
 }
 
-.theme-btn {
+.toggles {
+  position: fixed;
+  z-index: 10;
   top: 5%;
   right: 3%;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: var(--color-grey-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.toggles .toggle {
+  padding: 1rem;
   cursor: pointer;
-  position: fixed;
+  background-color: var(--color-grey-4);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0.5rem 0;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in-out;
 }
-.theme-btn:active {
+.toggles .toggle:active {
   transform: translateY(-3px);
 }
-.theme-btn i {
+.toggles .toggle i {
   font-size: 1.4rem;
   color: var(--color-grey-2);
   pointer-events: none;
@@ -444,7 +455,7 @@ section {
 }
 
 .port-text {
-  padding: 2rem 0;
+  padding: 4rem 0 2.5rem;
   text-align: center;
 }
 
@@ -528,7 +539,7 @@ section {
 }
 .blogs .blog {
   position: relative;
-  background-color: var(--color-grey-5);
+  background-color: var(--color-grey-7);
   border-radius: 5px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease-in-out;
