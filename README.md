@@ -10,6 +10,7 @@ Olá! Bem-vindo ao meu repositório de portfólio. Aqui você encontrará inform
    <img align="center" alt="javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>   
    <img align="center" alt="sass" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"/>
    <img align="center" alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+<img align="center" alt="Vercel" src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>"
 </div>
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
@@ -17,12 +18,19 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - **HTML, CSS e JavaScript**: Para criação de interfaces web e funcionalidades interativas.
 - **Bootstrap**: Utilizado para estilização e responsividade.
 - **SASS**: Utilizado para turbinar o CSS e facilitar a escrita de estilos mais complexos.
+- **Vercel**: Como plataforma de hospedagem, permitindo que meus projetos estejam disponíveis globalmente com alta velocidade, escalabilidade e segurança.
 
 ### Funcionalidades de Dia e Noite e Troca de Idioma
 
 Para tornar a experiência do usuário mais agradável, utilizei **JavaScript** para implementar funcionalidades de **alternância entre temas de dia e noite** e **troca de idioma**. Assim, os visitantes podem escolher a aparência que preferem e visualizar o conteúdo em diferentes línguas.
 
+| <img src="img/assets_readme/screenshot2024-03-09%2000-41-41.png" title="" alt="" width="292">       | <img title="" src="img/assets_readme/screenshot2024-03-09 00-42-09.png" alt="" width="292">     |
+| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| <img src="img/assets_readme/screenshot2024-03-09%20at%2000.40.05.jpeg" title="" alt="" width="295"> | <img title="" src="img/assets_readme/screenshot2024-03-09 at 00.50.25.jpeg" alt="" width="295"> |
 
+### Em Desenvolvimento
+
+- [ ] Versão em React
 
 ## Sobre Mim
 
