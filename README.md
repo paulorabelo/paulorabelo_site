@@ -1,5 +1,7 @@
 # Paulo Rabelo - Portfólio
 
+![Static Badge](https://img.shields.io/badge/MIT-licence-yellow?link=https%3A%2F%2Fgithub.com%2Fpaulorabelo%2Fpaulorabelo_site%2Fblob%2Fmain%2FLICENSE)
+
 Olá! Bem-vindo ao meu repositório de portfólio. Aqui você encontrará informações sobre os projetos que desenvolvi e/ou em desenvolvimento e as tecnologias que utilizei. Vamos dar uma olhada!
 
 ## Tecnologias Utilizadas
@@ -23,6 +25,8 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ### Funcionalidades de Dia e Noite e Troca de Idioma
 
 Para tornar a experiência do usuário mais agradável, utilizei **JavaScript** para implementar funcionalidades de **alternância entre temas de dia e noite** e **troca de idioma**. Assim, os visitantes podem escolher a aparência que preferem e visualizar o conteúdo em diferentes línguas.
+
+### Layouts Desktop e Mobile
 
 | <img src="img/assets_readme/screenshot2024-03-09%2000-41-41.png" title="" alt="" width="292">       | <img title="" src="img/assets_readme/screenshot2024-03-09 00-42-09.png" alt="" width="292">     |
 | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
