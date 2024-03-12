@@ -1,6 +1,6 @@
 # Paulo Rabelo - Portfólio
 
-[![Static Badge]https://img.shields.io/badge/Licence-MIT-yellow](https://github.com/paulorabelo/paulorabelo_site/blob/develop/LICENCE)
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/paulorabelo/paulorabelo_site/blob/develop/LICENSE)
 
 Olá! Bem-vindo ao meu repositório de portfólio. Aqui você encontrará informações sobre os projetos que desenvolvi e/ou em desenvolvimento e as tecnologias que utilizei. Vamos dar uma olhada!
 
