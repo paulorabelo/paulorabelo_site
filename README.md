@@ -22,9 +22,9 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - **SASS**: Utilizado para turbinar o CSS e facilitar a escrita de estilos mais complexos.
 - **Vercel**: Como plataforma de hospedagem, permitindo que meus projetos estejam disponíveis globalmente com alta velocidade, escalabilidade e segurança fazendo o deploy direto pelo GitHub.
 
-### Funcionalidades de Dia e Noite e Troca de Idioma
+### Funcionalidades de Dia e Noite, Troca de Idioma e Contato
 
-Para tornar a experiência do usuário mais agradável, utilizei **JavaScript** para implementar funcionalidades de **alternância entre temas de dia e noite** e **troca de idioma**. Assim, os visitantes podem escolher a aparência que preferem e visualizar o conteúdo em diferentes línguas.
+Para tornar a experiência do usuário mais agradável, utilizei **JavaScript** para implementar funcionalidades como formulário de contato com tecnologia [**EmailJS**](https://www.emailjs.com/) e para a **alternância entre os temas dia e noite** e **troca de idioma**. Assim, os visitantes podem escolher a aparência que preferem e visualizar o conteúdo em diferentes idiomas.
 
 ### Layouts Desktop e Mobile
 
