@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/paulorabelo/paulorabelo_site/blob/develop/LICENSE)
 
-Olá! Bem-vindo ao meu repositório de portfólio. Aqui você encontrará informações sobre os projetos que desenvolvi e/ou em desenvolvimento e as tecnologias que utilizei. Vamos dar uma olhada!
+Olá! Bem-vindo ao meu repositório de meu site portfólio. Aqui você encontrará informações sobre o projeto em si e também sobre alguns outros que estão em desenvolvimento e as tecnologias que utilizei. Vamos dar uma olhada!
 
 ## Tecnologias Utilizadas
 
@@ -20,7 +20,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - **HTML, CSS e JavaScript**: Para criação de interfaces web e funcionalidades interativas.
 - **Bootstrap**: Utilizado para estilização e responsividade.
 - **SASS**: Utilizado para turbinar o CSS e facilitar a escrita de estilos mais complexos.
-- **Vercel**: Como plataforma de hospedagem, permitindo que meus projetos estejam disponíveis globalmente com alta velocidade, escalabilidade e segurança.
+- **Vercel**: Como plataforma de hospedagem, permitindo que meus projetos estejam disponíveis globalmente com alta velocidade, escalabilidade e segurança fazendo o deploy direto pelo GitHub.
 
 ### Funcionalidades de Dia e Noite e Troca de Idioma
 
@@ -34,14 +34,14 @@ Para tornar a experiência do usuário mais agradável, utilizei **JavaScript**
 
 ### Em Desenvolvimento
 
-- [ ] Versão em React
+- [ ] Versão em React, mais moderna e modularizada.
 
 ## Sobre Mim
 
 Meu nome é **Paulo Rabelo**, sou um desenvolvedor apaixonado por tecnologia e programação. Atualmente, moro em São Paulo, Brasil. Aqui estão algumas informações sobre mim:
 
 - **Formação**: Graduado em **Análise e Desenvolvimento de Sistemas**.
-- **Pós-graduação**: Tecnologia Java e conhecimento em **Spring Boot** e **SQL Developer**.
+- **Pós-graduação**: Tecnologia Java e conhecimento em **Spring Boot** e **SQL**.
 - **Experiência**: Trabalhei em projetos de backend, mobile e web.
 - **Linguagens**: Java, JavaScript, HTML, CSS.
 - **Interesses**: Desenvolvimento de aplicativos, algoritmos e soluções criativas.
