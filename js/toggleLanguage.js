@@ -1,18 +1,26 @@
-var divEnglish = document.getElementById('english');
-var divPortuguese = document.getElementById('portuguese');
+var divsEnglish = document.getElementsByClassName('us-en');
+var divsPortuguese = document.getElementsByClassName('pt-br');
 
-divEnglish.style.display = 'block';
-divPortuguese.style.display = 'none';
+setDisplay(divsEnglish, 'block');
+setDisplay(divsPortuguese, 'none');
+
+// setDisplay(divsEnglish, 'none');
+// setDisplay(divsPortuguese, 'block');
 
 function toggleLanguage() {
+    toggleDisplay(divsEnglish);
+    toggleDisplay(divsPortuguese);
+}
 
-    
-    if (divEnglish.style.display === 'none') {
-        divEnglish.style.display = 'block';
-        divPortuguese.style.display = 'none';
-    } else {
-        divEnglish.style.display = 'none';
-        divPortuguese.style.display = 'block';
+function setDisplay(elements, display) {
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.display = display;
+    }
+}
+
+function toggleDisplay(elements) {
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.display = (elements[i].style.display === 'none') ? 'block' : 'none';
     }
 }
 
