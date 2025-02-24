@@ -758,9 +758,9 @@ section {
   header {
     padding: 0 !important;
   }
-  .theme-btn {
-    width: 50px;
-    height: 50px;
+  .toggles .toggle {
+    width: 35px;
+    height: 35px;
   }
   .header-content {
     grid-template-columns: repeat(1, 1fr);
