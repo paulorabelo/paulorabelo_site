@@ -11,23 +11,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="./img/favicon_io/site.webmanifest">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
-<!-- EmailJS tag -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script src="./js/form.js"></script>
-<script type="text/javascript">
-    (function () {
-        emailjs.init("nHCVVJbiTjjD1PbiR");
-    })();
-</script>
+
 
 
 
@@ -808,8 +800,17 @@
             <i class="fa-solid fa-earth-americas"></i>
         </div>
     </div>
-    <script src="./js/app.js"></script>
-    <script src="./js/toggleLanguage.js"></script>
+    <!-- EmailJS tag -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script src="./js/form.js" defer></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("nHCVVJbiTjjD1PbiR");
+        })();
+    </script>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/toggleLanguage.js" defer></script>
 </body>
 
 </html>
