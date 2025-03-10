@@ -34,7 +34,7 @@ Para tornar a experiência do usuário mais agradável, utilizei **JavaScript**
 
 ### Otimização
 
-<img src="img/assets_readme/pagespeed_2025-03-10_00-13-48.png">
+<img src="img/assets_readme/pagespeed_2025-03-10_00-13-48.png" width=100%>
 
 ### Em Desenvolvimento
 
