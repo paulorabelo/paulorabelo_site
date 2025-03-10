@@ -32,6 +32,10 @@ Para tornar a experiência do usuário mais agradável, utilizei **JavaScript**
 | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | <img src="img/assets_readme/screenshot2024-03-09%20at%2000.40.05.jpeg" title="" alt="" width="295"> | <img title="" src="img/assets_readme/screenshot2024-03-09 at 00.50.25.jpeg" alt="" width="295"> |
 
+### Otimização
+
+<img src="img/assets_readme/pagespeed_2025-03-10_00-13-48.png">
+
 ### Em Desenvolvimento
 
 - [ ] Versão em React, mais moderna e modularizada.
