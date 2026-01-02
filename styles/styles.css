@@ -179,8 +179,7 @@ section {
   left: 0;
   top: 0;
   z-index: -1;
-  -webkit-clip-path: polygon(0% 0%, 30% 0, 100% 50%, 30% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 30% 0, 100% 50%, 30% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 30% 0, 100% 50%, 30% 100%, 0% 100%);
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);

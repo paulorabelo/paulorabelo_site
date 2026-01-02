@@ -730,3 +730,13 @@ section {
 }
 
 @import './media';
+
+.progress-bar {
+        height: 20px;
+            background-color: #007bff; /* Use a cor do seu site */
+                transition: width 1.5s ease-in-out; /* Efeito de animação ao carregar */
+                    text-align: center;
+                        color: white;
+                        }
+                        
+}
