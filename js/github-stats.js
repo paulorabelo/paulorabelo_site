@@ -61,7 +61,7 @@ async function renderGitHubSkills() {
                         </span>
                     </div>
                 `;
-                                container.parentNode.appendChild(sourceDiv);
+                                container.insertAdjacentElement('afterend', sourceDiv);
                         }
                 });
 
