@@ -363,25 +363,28 @@ section {
   height: 100%;
   background-color: var(--color-secondary);
   transition: all 0.4s ease-in-out;
-  width: 60%;
+  width: 0;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .java {
-  width: 30.4%;
+
+.skills-source {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--color-grey-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .html {
-  width: 29.24%;
+.skills-source i {
+  font-size: 1.2rem;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .ts {
-  width: 14.07%;
+.skills-source a {
+  color: var(--color-secondary);
+  text-decoration: none;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 13.04%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 8.82%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .shell {
-  width: 2.99%;
+.skills-source a:hover {
+  text-decoration: underline;
 }
 
 .stat-title {

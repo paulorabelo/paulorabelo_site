@@ -1,56 +1,74 @@
-/**
- *  * Função para buscar repositórios e calcular linguagens
-  */
-  async function fetchGitHubStats() {
-      const username = 'paulorabelo';
-          const container = document.getElementById('github-skills-container');
+async function renderGitHubSkills() {
+    const username = 'paulorabelo';
+    // Seleciona TODOS os containers de barras (tanto o de pt-br quanto o de us-en)
+    const containers = document.querySelectorAll('.progress-bars'); 
 
-              try {
-                      // 1. Busca todos os repositórios públicos do usuário
-                              const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
-                                      const repos = await response.json();
+    if (containers.length === 0) return;
 
-                                              const languageMap = {};
-                                                      let totalSize = 0;
+    try {
+        const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+        const repos = await response.json();
 
-                                                              // 2. Soma o tamanho (bytes) de cada linguagem encontrada
-                                                                      repos.forEach(repo => {
-                                                                                  if (repo.language) {
-                                                                                                  languageMap[repo.language] = (languageMap[repo.language] || 0) + 1; 
-                                                                                                                  // Nota: Para maior precisão, poderíamos buscar detalhes de cada repo, 
-                                                                                                                                  // mas contar a frequência por repo é mais rápido para a API.
-                                                                                                                                                  totalSize++;
-                                                                                                                                                              }
-                                                                                                                                                                      });
+        const langData = {};
+        let totalPoints = 0;
 
-                                                                                                                                                                              // 3. Limpa o container de "Carregando"
-                                                                                                                                                                                      container.innerHTML = '';
+        repos.forEach(repo => {
+            if (repo.language) {
+                langData[repo.language] = (langData[repo.language] || 0) + 1;
+                totalPoints++;
+            }
+        });
 
-                                                                                                                                                                                              // 4. Cria o HTML para cada linguagem encontrada
-                                                                                                                                                                                                      Object.keys(languageMap).forEach(lang => {
-                                                                                                                                                                                                                  const percentage = Math.round((languageMap[lang] / totalSize) * 100);
-                                                                                                                                                                                                                              
-                                                                                                                                                                                                                                          // Criando a estrutura compatível com seu CSS
-                                                                                                                                                                                                                                                      const skillHTML = `
-                                                                                                                                                                                                                                                                      <div class="skill-item">
-                                                                                                                                                                                                                                                                                          <span>${lang}</span>
-                                                                                                                                                                                                                                                                                                              <div class="progress-bar-container">
-                                                                                                                                                                                                                                                                                                                                      <div class="progress-bar" style="width: ${percentage}%">
-                                                                                                                                                                                                                                                                                                                                                                  ${percentage}%
-                                                                                                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                                                                                                                              </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                              </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                          `;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                      container.innerHTML += skillHTML;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              });
+        const sortedLangs = Object.entries(langData).sort((a, b) => b[1] - a[1]);
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                  } catch (error) {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                          console.error('Erro ao buscar dados do GitHub:', error);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  container.innerHTML = '<p>Não foi possível carregar as habilidades no momento.</p>';
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
+        // Percorremos cada container encontrado para injetar o HTML
+        containers.forEach(container => {
+            container.innerHTML = ''; // Limpa o "Carregando..." de cada um
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      // Executa a função ao carregar a página
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      window.onload = fetchGitHubStats;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
- */
+            sortedLangs.forEach(([lang, count]) => {
+                const percentage = ((count / totalPoints) * 100).toFixed(2);
+                const skillElement = `
+                    <div class="progress-bar">
+                        <p class="prog-title">${lang}</p>
+                        <div class="progress-con">
+                            <p class="prog-text">${percentage}%</p>
+                            <div class="progress">
+                                <span style="width: ${percentage}%"></span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += skillElement;
+            });
+
+            // Adiciona o selo da fonte abaixo de cada container
+            const sourceDivId = `source-${container.parentElement.className.includes('pt-br') ? 'pt' : 'en'}`;
+            if (!document.getElementById(sourceDivId)) {
+                const sourceDiv = document.createElement('div');
+                sourceDiv.id = sourceDivId;
+                sourceDiv.className = 'skills-source';
+                
+                // Define o texto baseado na linguagem do container pai
+                const label = container.closest('.pt-br') ? 'Dados sincronizados via' : 'Data synced via';
+                
+                sourceDiv.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 30px; border-top: 1px solid var(--color-grey-5); padding-top: 20px;">
+                        <svg height="20" viewBox="0 0 16 16" width="20" fill="var(--color-secondary)" style="flex-shrink: 0;">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>
+                        <span style="font-size: 0.85rem; color: var(--color-grey-2); text-transform: uppercase; letter-spacing: 1px;">
+                            ${label} <a href="https://github.com/paulorabelo" target="_blank" style="color: var(--color-secondary); text-decoration: none; font-weight: bold;">GitHub API</a>
+                        </span>
+                    </div>
+                `;
+                container.parentNode.appendChild(sourceDiv);
+            }
+        });
+
+    } catch (error) {
+        console.error("Erro ao carregar skills:", error);
+    }
+}
+
+// Inicialização
+document.addEventListener('DOMContentLoaded', renderGitHubSkills);

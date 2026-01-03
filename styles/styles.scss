@@ -357,17 +357,29 @@ section {
                         height: 100%;
                         background-color: var(--color-secondary);
                         transition: all .4s ease-in-out;
-                        width: 60%;
+                        width: 0;
                     }
-                    .java { width: 30.40%; }
-                    .html { width: 29.24%; }
-                    .ts { width: 14.07%; }
-                    .js{ width: 13.04%; }
-                    .css{ width: 8.82%; }
-                    .shell{ width: 2.99%; }
                 }
             }
         }
+    }
+}
+// Estilo para o indicativo da fonte (Rodapé das skills)
+.skills-source {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--color-grey-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    i { font-size: 1.2rem; } // Caso use FontAwesome
+    a { 
+        color: var(--color-secondary); 
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
     }
 }
 .stat-title {
@@ -731,12 +743,11 @@ section {
 
 @import './media';
 
-.progress-bar {
-        height: 20px;
-            background-color: #007bff; /* Use a cor do seu site */
-                transition: width 1.5s ease-in-out; /* Efeito de animação ao carregar */
-                    text-align: center;
-                        color: white;
-                        }
+// .progress-bar {
+//         height: 20px;
+//             background-color: #007bff; /* Use a cor do seu site */
+//                 transition: width 1.5s ease-in-out; /* Efeito de animação ao carregar */
+//                     text-align: center;
+//                         color: white;
+//                         }
                         
-}
