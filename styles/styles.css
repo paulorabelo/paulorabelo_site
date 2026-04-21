@@ -588,7 +588,13 @@ section {
 
 .contact-content-con {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   padding-top: 3.5rem;
+}
+.contact-content-con .left-contact,
+.contact-content-con .right-contact {
+  min-width: 0;
 }
 .contact-content-con .left-contact {
   flex: 2;
@@ -851,10 +857,16 @@ section {
   }
   .contact-content-con {
     flex-direction: column;
+    align-items: stretch;
+    width: 100%;
   }
   .contact-content-con .right-contact {
     margin-left: 0;
     margin-top: 2.5rem;
+    width: 100%;
+  }
+  .contact-content-con .left-contact {
+    width: 100%;
   }
   .contact-content-con .right-contact .i-c-2 {
     flex-direction: column;
@@ -868,14 +880,17 @@ section {
   }
   .contact-item {
     flex-direction: column;
+    align-items: flex-start;
     margin: 1rem 0;
   }
   .contact-item p {
     font-size: 15px;
     color: var(--color-grey-2);
+    overflow-wrap: anywhere;
   }
   .contact-item span {
     font-size: 15px;
+    overflow-wrap: anywhere;
   }
   .contact-item .icon {
     grid-template-columns: 25px 1fr;
@@ -896,10 +911,16 @@ section {
   }
   .contact-content-con {
     flex-direction: column;
+    align-items: stretch;
+    width: 100%;
   }
   .contact-content-con .right-contact {
     margin-left: 0;
     margin-top: 2.5rem;
+    width: 100%;
+  }
+  .contact-content-con .left-contact {
+    width: 100%;
   }
   .contact-content-con .right-contact .i-c-2 {
     flex-direction: column;

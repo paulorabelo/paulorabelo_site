@@ -597,7 +597,13 @@ section {
 //Contact section
 .contact-content-con {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   padding-top: 3.5rem;
+  .left-contact,
+  .right-contact {
+    min-width: 0;
+  }
   .left-contact {
     flex: 2;
     h4 {
