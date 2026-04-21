@@ -6,8 +6,17 @@ async function renderGitHubSkills() {
         if (containers.length === 0) return;
 
         try {
-                const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
-                const repos = await response.json();
+                let repos;
+                const cachedData = sessionStorage.getItem('github_repos');
+
+                if (cachedData) {
+                        repos = JSON.parse(cachedData);
+                } else {
+                        const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+                        if (!response.ok) throw new Error('Rate limit ou erro na API');
+                        repos = await response.json();
+                        sessionStorage.setItem('github_repos', JSON.stringify(repos));
+                }
 
                 const langData = {};
                 let totalPoints = 0;
@@ -26,10 +35,12 @@ async function renderGitHubSkills() {
                         container.innerHTML = ''; // Limpa o "Carregando..." de cada um
 
                         sortedLangs.forEach(([lang, count]) => {
+                                // Sanitização básica da linguagem para evitar injeção HTML
+                                const safeLang = lang ? lang.replace(/</g, "&lt;").replace(/>/g, "&gt;") : 'Unknown';
                                 const percentage = ((count / totalPoints) * 100).toFixed(2);
                                 const skillElement = `
                     <div class="progress-bar">
-                        <p class="prog-title">${lang}</p>
+                        <p class="prog-title">${safeLang}</p>
                         <div class="progress-con">
                             <p class="prog-text">${percentage}%</p>
                             <div class="progress">
