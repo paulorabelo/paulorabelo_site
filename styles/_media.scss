@@ -213,7 +213,12 @@
   }
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 749px) {
+  .toggles {
+    right: 3%;
+    left: auto;
+  }
+
   .about-container {
     grid-template-columns: repeat(1, 1fr);
     .right-about {
