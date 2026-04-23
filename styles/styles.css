@@ -130,7 +130,7 @@ section {
   position: fixed;
   z-index: 10;
   top: 5%;
-  right: 3%;
+  left: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -960,8 +960,8 @@ section {
 }
 @media screen and (max-width: 749px) {
   .toggles {
-    right: 3%;
-    left: auto;
+    left: 3%;
+    right: auto;
   }
   .about-container {
     grid-template-columns: repeat(1, 1fr);
