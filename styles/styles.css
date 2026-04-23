@@ -6,7 +6,7 @@
 }
 
 :root {
-  --color-primary: #FFFFFF;
+  --color-primary: #ffffff;
   --color-secondary: #a18a17;
   --color-terceary: #000b49;
   --color-black: #000;
@@ -19,13 +19,13 @@
   --color-grey-6: #12181b;
   --color-grey-7: #f8f8f8;
   --br-sm-2: 14px;
-  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode {
   --color-primary: #000b49;
   --color-secondary: #a18a17;
-  --color-terceary: #FFFFFF;
+  --color-terceary: #ffffff;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
@@ -130,7 +130,7 @@ section {
   position: fixed;
   z-index: 10;
   top: 5%;
-  right: 3%;
+  left: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -662,7 +662,8 @@ section {
 .contact-content-con .right-contact .input-control {
   margin: 1.5rem 0;
 }
-.contact-content-con .right-contact .input-control input, .contact-content-con .right-contact .input-control textarea {
+.contact-content-con .right-contact .input-control input,
+.contact-content-con .right-contact .input-control textarea {
   border-radius: 30px;
   font-weight: inherit;
   font-size: inherit;
@@ -701,7 +702,8 @@ section {
   position: relative;
   border: 1px solid var(--color-secondary);
   background-color: transparent;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   -webkit-appearance: none;
   cursor: pointer;
   padding: 0;
@@ -956,7 +958,11 @@ section {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 749px) {
+  .toggles {
+    left: 3%;
+    right: auto;
+  }
   .about-container {
     grid-template-columns: repeat(1, 1fr);
   }
